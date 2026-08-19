@@ -103,7 +103,6 @@ This notebook does **not** run any automata — it's a pure analysis layer over 
 | **By-arrays experiment** | `experiments/by_arrays/dfa_by_array.csv`, `regex_by_array.csv` | Runtime vs. file size when sweeping array **branching factor** (`array_size`) |
 | **Combined rejection plot** | `reject.csv` (pre-aggregated) | Three-way comparison: DFA reject vs. regex reject vs. DFA accept on similar-size valid files — highlights the DFA acceptor's early-abort speed advantage |
 | **Throughput** | benchmark CSVs + `json_symbol_counts.csv` | Normalizes runtime by `total_symbols` processed to get symbols/ms throughput, so acceptor speed can be compared independent of raw file size |
-| **Drive mount** | — | Mounts Google Drive at `/content/drive` (Colab-only) so CSVs stored there are accessible |
 | **Peak / mean / median / std throughput** | — (uses `long_throughput_df` from the Throughput section) | Summary statistics on the computed throughput values, for reporting headline numbers |
 
 #### Requirements
