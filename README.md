@@ -8,7 +8,19 @@ This notebook explores **hedge automata** (tree automata that accept unranked tr
 - **`RecursiveJsonGenerator`** — recursively builds nested JSON documents (objects/arrays/values) with configurable `depth`, `members_per_object`, `array_size`, and `recursive_ratio`.
 - **`generate_file`** — generates a single JSON file from the generator and reports its size.
 - **`generate_experiments`** — sweeps one parameter (`depth`, `members`, or `arrays`) over a range while holding the others fixed, writing a batch of JSON files to `json_dataset/`. Two example sweeps are included (varying `members` and `arrays` from 5 to 50).
-- The generated dataset is zipped for download (`json_dataset3.zip`).
+- The generated dataset is zipped for download (`json_dataset3.zip` or any name chosen by the user).
+
+### Dataset Download
+The dataset used for the experiment can be downloaded using
+```python
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("yanos843/json-true")
+
+print("Path to dataset files:", path)
+```
+Please make sure to edit the correct path directories when using the dataset.
 
 ### 2. Hedge automaton core classes
 A minimal object model for finite tree automata (FTA) over unranked trees:
